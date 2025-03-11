@@ -1,0 +1,32 @@
+package com.learningjava;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
+import com.learningjava.dto.TopStock;
+import com.learningjava.repository.TopStockFunction;
+import com.learningjava.utility.ReadFile;
+
+public class _DisplayAllStocks {
+	public static void main(String[] args) {
+		if(args.length > 0) {
+			String mode= args[0];
+			Consumer<String> consumer = QueryOption.map.get(mode);
+			consumer.accept("");
+		}
+		else {
+			String message ="Please enter on of the parameter: [";
+			StringBuilder sb = new StringBuilder();
+			
+			QueryOption.map.forEach((k,v) -> {
+					sb.append(k);
+					sb.append(" ");
+			});
+			message = message + sb +"]";
+			System.out.print(message);
+		}
+
+	}
+}
+

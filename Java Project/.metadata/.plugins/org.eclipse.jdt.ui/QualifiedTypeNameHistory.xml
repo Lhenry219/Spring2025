@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="edu.cuny.citytech.cst.gpa.GPA.Score"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="com.learningjava.sandbox.ReadFile"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Formatter"/>
+    <fullyQualifiedTypeName name="edu.cuny.citytech.cst.service.ETFService"/>
+    <fullyQualifiedTypeName name="edu.cuny.citytech.cst.gpa.DTO.ETF"/>
+    <fullyQualifiedTypeName name="java.util.function.Consumer"/>
+</qualifiedTypeNameHistroy>

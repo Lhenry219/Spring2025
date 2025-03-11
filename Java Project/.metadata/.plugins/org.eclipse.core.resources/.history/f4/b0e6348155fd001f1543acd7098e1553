@@ -1,0 +1,14 @@
+package com.learningjava;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.learningjava.dto.TopStock;
+import com.learningjava.repository.TopStockFunction;
+import com.learningjava.utility.ReadFile;
+
+public class _DisplayAllStocks {
+	public static void main(String[] args) {
+		QueryOption.map(mode);
+	}
+}

@@ -1,0 +1,16 @@
+package edu.cuny.citytech.cst.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.cuny.citytech.cst.gpa.DTO.ETF;
+import edu.cuny.citytech.cst.gpa.DTO.ETFpoints;
+
+public class ETFService {
+
+	List<ETF> list = new ArrayList<>();
+	
+	public List<ETFpoints> getBestDividenstocks(){
+		return new ArrayList<>();
+	}
+}

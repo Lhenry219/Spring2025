@@ -1,0 +1,8 @@
+package edu.cuny.citytech.utility;
+
+import java.util.function.Function;
+
+public class CSTFunction {
+
+	Function<Double,String> money = null;
+}

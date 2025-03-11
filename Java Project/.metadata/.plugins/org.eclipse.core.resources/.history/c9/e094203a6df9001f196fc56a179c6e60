@@ -1,0 +1,22 @@
+package edu.cuny.citytech.cst.Service;
+
+import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+
+import edu.cuny.citytech.cst.service.ETFService;
+
+public class T1_ETFService {
+
+	@Test
+	@DisplayName("Sellecting the right stock")
+	public void t1()
+	{
+		ETFService service = new ETFService();
+		
+		var list = service.getBestDividenstocks();
+		
+		list.forEach(System.out::println);
+		
+		assertTrue(list.size() < 300 && list.size() > 20, " erro not enough data");
+	}
+}

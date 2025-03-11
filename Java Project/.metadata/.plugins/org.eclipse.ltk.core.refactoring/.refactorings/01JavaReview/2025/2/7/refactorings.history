@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;T1_GPA.java&apos; to &apos;T1_GPA.java&apos;&#x0D;&#x0A;- Original project: &apos;01JavaReview&apos;&#x0D;&#x0A;- Destination element: &apos;T1_GPA.java&apos;&#x0D;&#x0A;- Original element: &apos;T1_GPA.java&apos;" description="Copy file" element1="src/test/java/edu/cuny/citytech/cst/gpa/T1_GPA.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1739495928725" target="/01JavaReview/src/test/java/edu/cuny/citytech/cst/gpa/T1_GPA.java" units="0" version="1.0"/>
+</session>

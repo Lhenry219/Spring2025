@@ -1,0 +1,31 @@
+package edu.cuny.citytech.cst.gpa.DTO;
+
+public class ETFpoints extends ETF {
+
+	private ETF etf;
+	public ETFpoints(ETF etf) {
+		this.etf=etf;
+	}
+	protected float expensesScore;
+	protected float dividendScore;
+	protected float riskScore;
+	protected float liquidityScore;
+	
+	public float getExpensesScore() {
+		return GPA.getQPA(etf.expenses);
+	}
+
+	public float getDividendScore() {
+		return dividendScore;
+	}
+
+	public float getRiskScore() {
+		return riskScore;
+	}
+
+	public float getLiquidityScore() {
+		return liquidityScore;
+	}
+
+	
+}

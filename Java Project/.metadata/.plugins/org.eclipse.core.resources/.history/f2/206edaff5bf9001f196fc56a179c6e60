@@ -1,0 +1,28 @@
+package edu.cuny.citytech.cst.repository;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import edu.cuny.citytech.cst.gpa.DTO.ETF;
+
+public class T1_ETFRepository {
+	@Test 
+	public void t1(){
+		var repository = new ETFRepository();
+		
+		List<ETF> list = repository.findAll();
+		
+		list.forEach(System.out::println);
+	}
+	@Test 
+	public void t2(){
+		var repository = new ETFRepository();
+		Predicate<ETF> predicates = e-> e.getFrequency().equals("Monthly");
+		
+		List<ETF> list = repository.find(predicates);
+		
+		list.forEach(System.out::println);
+		System.out.println("Size: " + list.size());
+	}
+}

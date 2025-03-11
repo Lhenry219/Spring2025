@@ -1,0 +1,5 @@
+package edu.cuny.citytech.cst.gpa.DTO;
+
+public class ETFpoints {
+
+}

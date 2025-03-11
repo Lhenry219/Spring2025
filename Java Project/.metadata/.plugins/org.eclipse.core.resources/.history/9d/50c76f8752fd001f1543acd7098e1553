@@ -1,0 +1,23 @@
+package com.learningjava;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.learningjava.dto.TopStock;
+import com.learningjava.repository.TopStockFunction;
+import com.learningjava.utility.ReadFile;
+
+public class QueryOption {
+	public static void main(String query) {
+		String directory = System.getenv("CST_3613_STOCK_DATA");
+	    String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+	    ReadFile.process(directory + fileName, list::add, 1, TopStock::populate);
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+
+
+	    list.forEach(System.out::println);
+	}
+
+}

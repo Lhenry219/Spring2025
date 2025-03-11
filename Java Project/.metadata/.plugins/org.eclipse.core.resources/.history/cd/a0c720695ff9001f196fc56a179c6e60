@@ -1,0 +1,11 @@
+package edu.cuny.citytech.cst.gpa.DTO;
+
+public class ETFpoints extends ETF {
+
+
+	protected float expensesScore;
+	protected float dividendScore;
+	protected float riskScore;
+	protected float liquidityScore;
+	
+}

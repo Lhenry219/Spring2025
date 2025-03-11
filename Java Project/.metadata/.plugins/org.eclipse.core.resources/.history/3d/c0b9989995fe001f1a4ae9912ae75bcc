@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+package com.learningjava.dto;
+
+public record User(String userID, String password, String fullName) {
+	public static User populate(String row)
+	{
+		String columns[] = row.split(",");
+		return new User(columns[0], columns[1], columns[2]);
+	}
+
+}
+=======
+package com.learningjava.dto;
+
+public record User(String userID, String password, String fullName) {
+	public static User populate(String row)
+	{
+		String columns[] = row.split(",");
+		return new User(columns[0], columns[1], columns[2]);
+	}
+
+}
+>>>>>>> 579b0bf1a55d39c60fe7beceaa336e584357bda4

@@ -1,0 +1,56 @@
+package edu.cuny.citytech.cst.gpa.DTO;
+
+import edu.cuny.citytech.cst.gpa.GPA;
+import edu.cuny.citytech.utility.CSTFunction;
+
+public class ETFpoints extends ETF {
+
+	private ETF etf;
+	public ETFpoints(ETF etf) {
+		this.etf=etf;
+	}
+	protected float expensesScore;
+	protected float dividendScore;
+	protected float riskScore;
+	protected float liquidityScore;
+	
+	public float getExpensesScore() {
+		return GPA.getQPA(etf.expenses);
+	}
+
+	public float getDividendScore() {
+		return GPA.getQPA(etf.dividends);
+	}
+
+	public float getRiskScore() {
+		return GPA.getQPA(etf.risk);
+	}
+
+	public float getLiquidityScore() {
+		return GPA.getQPA(etf.liquidity);
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ETF [rank= ");
+		builder.append(etf.rank);
+		builder.append(", symbol= ");
+		builder.append(etf.symbol);
+		builder.append(", aum= ");
+		builder.append(CSTFunction.money.apply(aum));
+		builder.append(", dividends= ");
+		builder.append(etf.dividends);
+		builder.append(etf.getDividendScore());
+		builder.append(", payoutDate= ");
+		builder.append(etf.payoutDate);
+		builder.append(", yield= ");
+		builder.append(etf.yield);
+		builder.append(", frequency= ");
+		builder.append(etf.frequency);
+		builder.append("]");
+		return builder.toString();
+	}
+}

@@ -1,0 +1,133 @@
+<<<<<<< HEAD
+package com.learningjava.repository;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import com.learningjava.dto.TopStock;
+import com.learningjava.utility.ReadFile;
+
+public class T3_ReadFile {
+	@Test
+	void t1() {
+		System.out.println("Developer: Henry Liu, " + new java.util.Date());
+		
+		String directory = System.getenv("cst3613data");
+		String fileName = "/Top Rated Stocks 2025-02-01.csv";
+		ReadFile.process(directory + fileName);
+	}
+	@Test
+	void t2() {
+		
+    	
+		String directory = System.getenv("cst3613data");
+		String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+
+		ReadFile.process(directory + fileName, list::add,1 ,TopStock::populate);
+	    
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+		assertEquals(expected,actual);
+		
+		list.forEach(System.out::println);
+	}
+	@Test
+	void t3() {
+	    String directory = System.getenv("CST_3613_STOCK_DATA");
+	    String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+	    ReadFile.process(directory + fileName, list::add, 1, TopStock::populate);
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+	    assertEquals(expected, actual);
+
+	    list.forEach(System.out::println);
+	}
+
+	@Test
+	void t4() {
+	    String directory = System.getenv("CST_3613_STOCK_DATA");
+	    String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+	    ReadFile.process(directory + fileName, list::add, 1, TopStock::populate,e -> e.divYield() > 0.05f);
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+	    assertEquals(expected, actual);
+
+	    list.stream().forEach(System.out::println);
+	}
+
+}
+=======
+package com.learningjava.repository;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import com.learningjava.dto.TopStock;
+import com.learningjava.utility.ReadFile;
+
+public class T3_ReadFile {
+	@Test
+	void t1() {
+		System.out.println("Developer: Henry Liu, " + new java.util.Date());
+		
+		String directory = System.getenv("cst3613data");
+		String fileName = "/Top Rated Stocks 2025-02-01.csv";
+		ReadFile.process(directory + fileName);
+	}
+	@Test
+	void t2() {
+		
+    	
+		String directory = System.getenv("cst3613data");
+		String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+
+		ReadFile.process(directory + fileName, list::add,1 ,TopStock::populate);
+	    
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+		assertEquals(expected,actual);
+		
+		list.forEach(System.out::println);
+	}
+	@Test
+	void t3() {
+	    String directory = System.getenv("CST_3613_STOCK_DATA");
+	    String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+	    ReadFile.process(directory + fileName, list::add, 1, TopStock::populate);
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+	    assertEquals(expected, actual);
+
+	    list.forEach(System.out::println);
+	}
+
+	@Test
+	void t4() {
+	    String directory = System.getenv("CST_3613_STOCK_DATA");
+	    String fileName = "/Top Rated Stocks 2025-02-01.csv";
+	    List<TopStock> list = new ArrayList<>();
+	    ReadFile.process(directory + fileName, list::add, 1, TopStock::populate,e -> e.divYield() > 0.05f);
+	    String expected = "WLKP";
+	    String actual = TopStockFunction.GetMax.apply(list);
+	    assertEquals(expected, actual);
+
+	    list.stream().forEach(System.out::println);
+	}
+
+}
+>>>>>>> 579b0bf1a55d39c60fe7beceaa336e584357bda4

@@ -1,0 +1,13 @@
+package edu.cuny.citytech.utility;
+
+import java.text.DecimalFormat;
+import java.util.Formatter;
+import java.util.function.Function;
+
+public class CSTFunction {
+	static private DecimalFormat formatter = new DecimalFormat("#,###.00");
+	
+	Function<Double,String> money = amount ->{
+		return formatter.format(amount);
+	};
+}

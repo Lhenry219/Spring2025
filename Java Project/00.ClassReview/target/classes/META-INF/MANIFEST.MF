@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: henry
+Build-Jdk: 23.0.2
+Main-Class: com.learningjava._DisplayAllStocks
+Created-By: Maven Integration for Eclipse
+
